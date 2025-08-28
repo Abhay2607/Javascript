@@ -63,8 +63,8 @@ h1, h2 {
   background: #4CAF50;
   color: #fff;
   border: none;
-  padding: 10px 15px;
-  font-size: 16px;
+  padding: 6px 22px;
+  font-size: 15px;
   border-radius: 6px;
   cursor: pointer;
   transition: background 0.3s ease;
@@ -101,25 +101,11 @@ h1, h2 {
   font-size: 16px;
 }
 
-/* Remove button */
-.remove-btn {
-  background: #e74c3c;
-  color: #fff;
-  border: none;
-  padding: 6px 10px;
-  font-size: 14px;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
 
-.remove-btn:hover {
-  background: #c0392b;
-}
 
 /* Cart total section */
 #cart-total {
-  text-align: right;
+  text-align: center;
   font-size: 18px;
 }
 
@@ -129,7 +115,7 @@ h1, h2 {
 }
 
 /* Checkout button */
-#ckekout-btn {
+#checkout-btn {
   background: #3498db;
   color: #fff;
   border: none;
@@ -141,7 +127,7 @@ h1, h2 {
   transition: background 0.3s ease;
 }
 
-#ckekout-btn:hover {
+#checkout-btn:hover {
   background: #2980b9;
 }
 
@@ -161,4 +147,23 @@ h1, h2 {
   #product-list {
     grid-template-columns: 1fr;
   }
+}
+
+
+.remove-from-cart {
+  
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    margin: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.remove-from-cart:hover {
+    background-color: #c82333;
+    transform: scale(1.1);
 }

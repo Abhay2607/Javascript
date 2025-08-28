@@ -1,40 +1,91 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     const products = [
-        { id: 1, name: "Apple", price: 99.99 },
-        { id: 2, name: "Peache", price: 89.99 },
-        { id: 3, name: "Banana", price: 69.909 },
+        { id: 1, name: "Apple", price: 99.50 },
+        { id: 2, name: "Peache", price: 89.00 },
+        { id: 3, name: "Banana", price: 69.050 },
+        { id: 4, name: "Grapes", price: 15.505 },
+        { id: 5, name: "Mango", price: 100.00 },
+        { id: 5, name: "Cherry", price: 35.50 },
+        { id: 5, name: "Watermelon", price: 110.00 },
+        { id: 5, name: "muskmelon", price: 67.75 },
     ]
 
     const cart = []
 
     const productList = document.querySelector("#product-list")
-    const cartItems = document.querySelector("#cart-itms")
+    const cartItems = document.querySelector("#cart-items")
     const emptyCartMessage = document.querySelector("#empty-cart")
     const cartTotalMessage = document.querySelector("#cart-total")
     const totalPriceDisplay = document.querySelector("#total-price")
     const checkOutBtn = document.querySelector("#checkout-btn")
 
-    products.forEach(product => {
-        let productDiv = document.createElement("div")
-        productDiv.classList.add("product");
+    products.forEach((product) => {
+        let productDiv = document.createElement('div');
+        productDiv.classList.add('product')
         productDiv.innerHTML = `
-        <span> ${product.name} - $${product.price.toFixed(2)} </span>
-        <button data-id="${product.id}"> Add to cart</button>
-    `
+        <span>${product.name} - $${product.price} </span>
+        <button  class="add-to-cart" data-id="${product.id}">Add to Cart</button>
+        `
         productList.appendChild(productDiv)
     })
 
     productList.addEventListener('click', function (e) {
-        if (e.target.tagName === "BUTTON") {
-            const productId = parseInt(e.target.getAttribute("data-id"))
-            const product = products.find(p => p.id === productId)
-            // console.log(product)
-            addToCart(product)
+        if (e.target.tagName === 'BUTTON') {
+            // console.log('test')
+            let productId = parseInt(e.target.getAttribute("data-id"))
+            let product = products.find(p => p.id === productId);
+            addToCart(product);
+        }
+    });
+
+    function addToCart(product) {
+        cart.push(product);
+        renderCart();
+    }
+
+
+    function renderCart() {
+        cartItems.innerHTML = ""
+        let totalPrice = 0
+
+        if (cart.length > 0) {
+            emptyCartMessage.classList.add("hidden")
+            cartTotalMessage.classList.remove("hidden")
+            cart.forEach((item, index) => {
+                totalPrice += item.price;
+                let cartDetail = document.createElement('div')
+                cartDetail.innerHTML = `
+                ${item.name} - $${item.price.toFixed(2)}
+                <button  class="remove-from-cart" data-id="${item.id}">Add to Cart</button>
+                `
+                cartItems.appendChild(cartDetail);
+
+                totalPriceDisplay.innerHTML = totalPrice;
+            })
+
+        } else {
+            emptyCartMessage.classList.remove("hidden")
+            totalPriceDisplay.innerHTML = '0.00'
 
         }
+    }
 
 
-})
+    cartItems.addEventListener("click", function (e) {
+        if (e.target.classList.contains("remove-from-cart")) {
+            let index = e.target.getAttribute("data-index");
+            // cart.splice(index, 1);
+            cart.remove(index)
+            renderCart(); 
+        }
+    });
+
+
+    checkOutBtn.addEventListener('click', function () {
+        cart.length = 0;
+        alert(`Checkout Successful`);
+        renderCart();
+    })
 
 })
