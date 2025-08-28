@@ -6,9 +6,9 @@ document.addEventListener("DOMContentLoaded", () => {
         { id: 3, name: "Banana", price: 69.050 },
         { id: 4, name: "Grapes", price: 15.505 },
         { id: 5, name: "Mango", price: 100.00 },
-        { id: 5, name: "Cherry", price: 35.50 },
-        { id: 5, name: "Watermelon", price: 110.00 },
-        { id: 5, name: "muskmelon", price: 67.75 },
+        { id: 6, name: "Cherry", price: 35.50 },
+        { id: 7, name: "Watermelon", price: 110.00 },
+        { id: 8, name: "muskmelon", price: 67.75 },
     ]
 
     const cart = []
@@ -75,9 +75,8 @@ document.addEventListener("DOMContentLoaded", () => {
     cartItems.addEventListener("click", function (e) {
         if (e.target.classList.contains("remove-from-cart")) {
             let index = e.target.getAttribute("data-index");
-            // cart.splice(index, 1);
-            cart.remove(index)
-            renderCart(); 
+            cart.splice(index, 1);
+            renderCart();
         }
     });
 
