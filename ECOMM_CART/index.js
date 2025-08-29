@@ -52,33 +52,48 @@ document.addEventListener("DOMContentLoaded", () => {
         if (cart.length > 0) {
             emptyCartMessage.classList.add("hidden")
             cartTotalMessage.classList.remove("hidden")
+            checkOutBtn.classList.remove("hidden")
+
             cart.forEach((item, index) => {
                 totalPrice += item.price;
                 let cartDetail = document.createElement('div')
                 cartDetail.innerHTML = `
                 ${item.name} - $${item.price.toFixed(2)}
-                <button  class="remove-from-cart" data-id="${item.id}">Add to Cart</button>
+                <button  class="remove-from-cart" data-index="${index}">Remove</button>
                 `
                 cartItems.appendChild(cartDetail);
 
-                totalPriceDisplay.innerHTML = totalPrice;
+                totalPriceDisplay.innerHTML = `$${totalPrice}`;
             })
-
+            
         } else {
             emptyCartMessage.classList.remove("hidden")
-            totalPriceDisplay.innerHTML = '0.00'
-
+            cartTotalMessage.classList.add("hidden")
+            checkOutBtn.classList.add("hidden");
         }
     }
 
 
     cartItems.addEventListener("click", function (e) {
         if (e.target.classList.contains("remove-from-cart")) {
-            let index = e.target.getAttribute("data-index");
+            let index = parseInt(e.target.getAttribute("data-index"));
             cart.splice(index, 1);
             renderCart();
         }
     });
+
+
+    //ANOTHER METHOD TO DELETE BY USING FIND()
+    // cartItems.addEventListener('click', function (e) {
+    //     if (e.target.classList.contains("remove-from-cart")) {
+    //         let id = parseInt(e.target.getAttribute("data-id"));
+    //         let index = cart.findIndex(item => item.id === id); 
+    //         cart.splice(index, 1);
+    //         renderCart();
+    //     }
+    // })
+
+
 
 
     checkOutBtn.addEventListener('click', function () {
