@@ -1,0 +1,101 @@
+/* index.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #0b2447; /* Dark navy background */
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  text-align: center;
+  gap: 20px;
+}
+
+/* Heading */
+.container h1 {
+  font-size: 2.3rem;
+  font-weight: 600;
+  color: #fff;
+  border-bottom: 3px solid #2ecc71; /* Green underline */
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Password box styling */
+.display {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border-radius: 6px;
+  padding: 10px 15px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.display input {
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  flex: 1;
+  color: #333;
+  background: none;
+}
+
+.display img {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.display img:hover {
+  transform: scale(1.1);
+}
+
+/* Button Styling */
+button#generate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #2ecc71;
+  color: #fff;
+  border: none;
+  outline: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button#generate img {
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+}
+
+button#generate:hover {
+  background: #27ae60;
+  transform: translateY(-2px);
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 500px) {
+  .display {
+    width: 90%;
+  }
+
+  .container h1 {
+    font-size: 1.8rem;
+  }
+}
