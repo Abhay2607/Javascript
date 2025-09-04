@@ -33,15 +33,13 @@ function calculateAge() {
     }
 
 
-    // let result = document.querySelector('#result');
+    let result = document.querySelector('#result');
     if (!result) {
-        let result = document.createElement('p');
-        // result.id = 'result';
+        result = document.createElement('p');
+        result.id = 'result';
         result.style.marginTop = '20px';
         result.style.fontSize = '20px';
         document.querySelector('.calculator').appendChild(result);
-        result.innerHTML = `You are <strong>${yearDiff}</strong> years, <strong>${monthDiff}</strong> months, and <strong>${dateDiff}</strong> days old.`;
     }
-
-    result.innerHTML = ''
+    result.innerHTML = `You are <strong>${yearDiff}</strong> years, <strong>${monthDiff}</strong> months, and <strong>${dateDiff}</strong> days old.`;
 }
