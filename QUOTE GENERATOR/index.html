@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+    <div class="quote-box">
+        <h2>Quote of the day</h2>
+        <button id="generate" onclick="generateQuote()">Generate</button>
+
+        <div class="hidden">
+            <blockquote id="quote">Loading...</blockquote>
+            <span id="author">Loading.....</span>
+            <div>
+                <button id="newQuote" onclick="getQuote()">New Quote</button>
+                <button id="tweet"><i class="fab fa-twitter"></i> Tweet</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>
