@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #111;
+}
+
+.container {
+  text-align: center;
+}
+
+.clock-container {
+  background: #222;
+  padding: 40px 60px;
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(0, 255, 200, 0.6);
+  margin-bottom: 20px;
+}
+
+#clock {
+  font-size: 60px;
+  color: #00ffc8;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  padding: 12px 25px;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, #43e97b, #38f9d7);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.25);
+}
+
+.btn:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.timeStampDiv {
+  margin-top: 20px;
+  text-align: center;
+}
+
+li {
+  list-style: none;
+  color: #00ffc8;
+  font-size: 20px;
+  padding: 5px 0;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 1px;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+li:hover {
+  color: #38f9d7;
+  transform: scale(1.05);
+}
+
+.delete-btn {
+    margin-left: 12px;
+    background: linear-gradient(135deg, #ff416c, #ff4b2b); /* bright red gradient */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 4px 10px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 6px rgba(255, 0, 0, 0.3);
+}
+
+.delete-btn:hover {
+    background: linear-gradient(135deg, #ff4b2b, #ff416c);
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 5px 10px rgba(255, 0, 0, 0.5);
+}
+
+.delete-btn:active {
+    transform: translateY(0) scale(1);
+    box-shadow: 0 2px 5px rgba(255, 0, 0, 0.3);
+}
+
