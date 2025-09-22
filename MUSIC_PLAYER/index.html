@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Player Card</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+  <div class="music-card">
+    <div class="top-controls">
+      <button class="btn"><i class="fa-solid fa-angle-left"></i></button>
+      <button class="btn"><i class="fa-solid fa-bars"></i></button>
+    </div>
+
+    <div class="album-cover">
+      <img src="https://www.theindianwire.com/wp-content/uploads/2019/02/Despacito.jpg" alt="Artist">
+    </div>
+
+    <div class="song-info">
+      <h3>Despacito</h3>
+      <p>Luis Fonsi Ft. Puerto Rican</p>
+    </div>
+
+    <audio  id="song">
+      <source src="media.mp3/luis-fonsi-daddy-yankee-despacito.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="progress">
+      <input type="range" value="40">
+    </div>
+
+    <div class="controls">
+      <button class="circle-btn"><i class="fa-solid fa-backward"></i></button>
+      <button  onclick="playPause()" class="circle-btn play"><i class="fa-solid fa-play"></i></button>
+      <button class="circle-btn"><i class="fa-solid fa-forward"></i></button>
+    </div>
+
+
+  </div>
+  </div>
+</body>
+<script src="script.js"></script>
+
+</html>

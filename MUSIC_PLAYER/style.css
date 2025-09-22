@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #2c2c2c;
+}
+
+.music-card {
+  background: linear-gradient(to bottom, #ffe0e0, #ffd6d6);
+  width: 300px;
+  border-radius: 20px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.top-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background: #fff;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.album-cover {
+  margin: 20px 0;
+}
+
+.album-cover img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.song-info h3 {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.song-info p {
+  font-size: 14px;
+  color: #666;
+}
+
+.progress {
+  margin: 20px 0;
+}
+
+.progress input[type="range"] {
+  width: 100%;
+  accent-color: #ff4081;
+  cursor: pointer;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.circle-btn {
+  background: #fff;
+  border: none;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.play {
+  background: #ff4081;
+  color: white;
+  width: 70px;
+  height: 70px;
+  font-size: 24px;
+}
+.pause {
+  background: #ff4081;
+  color: white;
+  width: 70px;
+  height: 70px;
+  font-size: 24px;
+}
